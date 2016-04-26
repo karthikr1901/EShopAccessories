@@ -1,0 +1,406 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="990" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td height="531" align="left" valign="top">
+                <table width="990" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td height="85" align="left" valign="top" class="menu">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="20%" height="85">
+                                        <a href="Default2.aspx">
+                                            <img src="images/onstore.jpg" alt="" width="201" height="85" border="0"></a>
+                                    </td>
+                                    <td width="80%">
+                                        <table width="790" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="61" height="25" align="center">
+                                                    <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Login</asp:LinkButton>
+                                                </td>
+                                                <td width="10">
+                                                    <a href="Default2.aspx">
+                                                        <img src="images/spacer.gif" alt="" width="10" height="10" border="0"></a>
+                                                </td>
+                                                <td width="245" align="center" class="txt">
+                                                    Shopping cart:  
+                                                    <a href="Default2.aspx" id="wht3">
+                                                    <asp:LinkButton ID="LinkButton8" runat="server"></asp:LinkButton>
+                                                    </a>&nbsp;
+                                                </td>
+                                                <td width="14">
+                                                    <a href="Default2.aspx">
+                                                        <img src="images/spacer.gif" alt="" width="10" height="10" border="0"></a>
+                                                </td>
+                                                <td width="182" align="center" class="txt">
+                                                    Currency:&nbsp;
+                                                    <select name="select" class="cls">
+                                                        <option value="1">US Dolars</option>
+                                                    </select>
+                                                </td>
+                                                <td width="14">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="263" class="txt">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="23%" class="txt">
+                                                                Search:
+                                                            </td>
+                                                            <td width="55%">
+                                                                <input name="textfield" type="text" class="int">
+                                                            </td>
+                                                            <td width="22%">
+                                                                <a href="Default2.aspx">
+                                                                    <img src="images/go.jpg" alt="" width="32" height="23" border="0"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table width="990" border="0" cellspacing="0" cellpadding="0">
+                    <tr align="left" valign="top">
+                        <td width="209" height="363">
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2"><asp:HyperLink ID="HyperLink1" runat="server" 
+                                    NavigateUrl="~/Default2.aspx">Home</asp:HyperLink>
+                                </a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><asp:HyperLink 
+                                    ID="HyperLink6" runat="server" NavigateUrl="~/Belt.aspx">Belt collection</asp:HyperLink>
+                            </div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2"><asp:HyperLink ID="HyperLink2" runat="server" 
+                                    NavigateUrl="~/Watch.aspx">Watch collection</asp:HyperLink>
+                                </a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2">Clothing</a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="shoes.aspx"
+                                    id="wht2"><asp:HyperLink ID="HyperLink3" runat="server" 
+                                    NavigateUrl="~/Wallet.aspx">Wallet collection</asp:HyperLink>
+                                </a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2"><asp:HyperLink ID="HyperLink7" runat="server" 
+                                    NavigateUrl="~/Pen.aspx">Pen collection</asp:HyperLink>
+                                </a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2"><asp:HyperLink ID="HyperLink4" runat="server" 
+                                    NavigateUrl="~/Sunglass.aspx">Sun glasses</asp:HyperLink>
+                                </a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2">Accessories</a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2">Gifts</a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2"><asp:HyperLink ID="HyperLink10" runat="server" 
+                                    NavigateUrl="~/About.aspx">About us</asp:HyperLink>
+                                </a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2"><asp:HyperLink ID="HyperLink9" runat="server" 
+                                    NavigateUrl="~/Contact.aspx">Contact us</asp:HyperLink>
+                                </a></div>
+                            <div class="button1">
+                                <img src="images/spacer.gif" alt="" width="25" height="19"><a href="Default2.aspx"
+                                    id="wht2">FAQ</a></div>
+                        </td>
+                        <td width="534">
+                            <a href="Default2.aspx">
+                                <img src="images/ads.jpg" alt="" width="534" height="371" border="0"></a>
+                        </td>
+                        <td width="247">
+                            <table width="246" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td>
+                                        <a href="Default2.aspx">
+                                            <img src="images/banner1.jpg" alt="" width="247" height="205" border="0"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <a href="Default2.aspx">
+                                            <img src="images/banner2.jpg" alt="" width="247" height="166" border="0"></a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table width="990" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td height="649" align="left" valign="top" class="tbody">
+                            <table width="990" height="636" border="0" cellpadding="0" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td width="209" height="636">
+                                        <table width="208" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td height="54">
+                                                    <span class="style1">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="1">Categories</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="348" valign="top">
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Activewear</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Camis</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Capris</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Polos</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Skirts</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Sweaters</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Swimwear</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Activewear</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Camis</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Capris</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Polos</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Skirts</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Sweaters</a></div>
+                                                    <div class="buttonwhite">
+                                                        <img src="images/spacer.gif" alt="" width="24" height="17"><a href="Default2.aspx"
+                                                            id="black">Swimwear</a></div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td height="161" align="left" valign="top" class="news">
+                                                    <form name="form1" method="post" action="">
+                                                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td width="10%" height="37">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td width="90%" valign="bottom" class="WhiteNews">
+                                                                Newsletter
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="29">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td valign="bottom" class="txt">
+                                                                Enter your e-mail:
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="41">
+                                                                &nbsp;
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" name="textfield2" class="NewsInfo">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                            <td>
+                                                                <a href="Default2.aspx">
+                                                                    <img src="images/sb.jpg" alt="" width="82" height="23" border="0"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td width="781">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                        <%--<table width="780" height="644" border="0" cellpadding="0" cellspacing="0">
+                                            <tr align="left" valign="top">
+                                                <td width="23" height="382">
+                                                    <a href="Default2.aspx">
+                                                        <img src="images/spacer.gif" alt="" width="10" height="10" border="0"></a>
+                                                </td>
+                                                <td width="735">
+                                                    <table width="734" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td>
+                                                                &nbsp;
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <span class="style1">Lorem ipsum</span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="images/hr.jpg" alt="" width="731" height="12">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height="62">
+                                                                Wisi, ex enim luptatum facilisi os vel epulae iustum duis facilisi ulciscor facilisi,
+                                                                luptatum. Gemino exerci ex ut bis antehabeo distineo hos cogo sit oppeto nostrud
+                                                                loquor iustotulto ut tum lobortis vero distineo
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="734" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td>
+                                                                <img src="images/a1.jpg" width="731" height="25">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <table width="734" border="0" cellspacing="0" cellpadding="0">
+                                                                    <tr>
+                                                                        <td width="58">
+                                                                            <a href="Default2.aspx">
+                                                                                <img src="images/a2.jpg" alt="" width="58" height="268" border="0"></a>
+                                                                        </td>
+                                                                        <td width="198">
+                                                                            <a href="Default2.aspx">
+                                                                                <img src="images/a3.jpg" alt="" width="198" height="268" border="0"></a>
+                                                                        </td>
+                                                                        <td width="10">
+                                                                            <a href="Default2.aspx">
+                                                                                <img src="images/a4.jpg" alt="" width="212" height="268" border="0"></a>
+                                                                        </td>
+                                                                        <td width="366">
+                                                                            <a href="Default2.aspx">
+                                                                                <img src="images/a5.jpg" alt="" width="200" height="268" border="0"></a>
+                                                                        </td>
+                                                                        <td width="102">
+                                                                            <a href="Default2.aspx">
+                                                                                <img src="images/a6.jpg" alt="" width="63" height="268" border="0"></a>
+                                                                        </td>
+                                                                    </tr>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <img src="images/a7.jpg" width="731" height="26">
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="734" border="0" cellspacing="0" cellpadding="0">
+                                                        <tr>
+                                                            <td height="22">
+                                                                <a href="Default2.aspx">
+                                                                    <img src="images/spacer.gif" alt="" width="10" height="10" border="0"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <table width="734" height="188" border="0" cellpadding="0" cellspacing="0">
+                                                        <tr>
+                                                            <td width="303">
+                                                                <span class="style1">Dodio delenit regula</span><br>
+                                                                Wisi, ex enim luptatum facilisi os vel epulae iustum duis facilisi ulciscor facilisi,
+                                                                luptatum. Gemino exerci ex ut bis antehabeo distineo<br>
+                                                                hos cogo sit oppeto nostrud loquor iustotulto<br>
+                                                                ut tum <a href="Default2.aspx">lobortis vero distineo</a>.<br>
+                                                            </td>
+                                                            <td width="39" align="center">
+                                                                <img src="images/as.gif" alt="" width="9" height="150">
+                                                            </td>
+                                                            <td width="392">
+                                                                <span class="style1">Dodio delenit regula</span><br>
+                                                                &nbsp;<span class="style2">&bull;</span>&nbsp;&nbsp;Wisi, ex enim luptatum facilisi
+                                                                os vel epulae iustum duisfa:<br>
+                                                                &nbsp;<span class="style2">&bull;</span>&nbsp;&nbsp;Multo ut tum lobortis vero distineo
+                                                                jumentum<br>
+                                                                &nbsp;<span class="style2">&bull;</span>&nbsp;&nbsp;Nobis lobortis olim viciser<br>
+                                                                &nbsp;<span class="style2">&bull;</span>&nbsp;&nbsp;Commoveo nunc ludus acsi distineo
+                                                                incassum nullus<br>
+                                                                &nbsp;<span class="style2">&bull;</span>&nbsp;&nbsp;Multo ut tum lobortis vero distineo
+                                                                jumentum
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                                <td width="22">
+                                                    <a href="Default2.aspx">
+                                                        <img src="images/spacer.gif" alt="" width="10" height="10" border="0"></a>
+                                                </td>
+                                            </tr>
+                                        </table>--%>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="58" class="footer">
+                            <table width="989" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="458" height="25" align="right" class="txt">
+                                        <asp:HyperLink ID="HyperLink8" runat="server" NavigateUrl="~/Default2.aspx">Home</asp:HyperLink>
+&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;
+                                        <a href="Default2.aspx" id="wht2">FAQ Certification</a>&nbsp;&nbsp;
+                                        |&nbsp;&nbsp; <a href="Default2.aspx" id="wht2">Shipping</a>&nbsp;
+                                        &nbsp;|&nbsp;&nbsp; <a href="Default2.aspx" id="wht2">Guarantee</a>
+                                        &nbsp;&nbsp;|&nbsp;&nbsp; <a href="Default2.aspx" id="wht2">Site
+                                            map</a>
+                                    </td>
+                                    <td width="125" class="txt">
+                                        &nbsp;
+                                    </td>
+                                    <td width="406" align="center" class="txt">
+                                        Copyright &copy; 2014. All Rights Reserved
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
