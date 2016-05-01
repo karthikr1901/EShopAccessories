@@ -39,5 +39,32 @@ public partial class feedback : System.Web.UI.Page
             gvUsers.Visible = false;
         }
     }
+    protected void fillgrid()
+    {
+        cn.Open();
+        cmd.CommandText = "SELECT * from feedback";
+        cmd.Connection = cn;
+        ad = new SqlDataAdapter(cmd);
+        ad.Fill(dataTable);
+        gvUsers.DataSource = dataTable;
+        gvUsers.DataBind();
+        cn.Close();
+    }
+
+    private bool isValid()
+    {
+        if (TextBox2.Text.Trim() == "")
+        {
+            Label3.Text = "Please enter Email";
+            return false;
+        }
+        if (TextBox1.Text.Trim() == "")
+        {
+            Label3.Text = "Please enter feedback";
+            return false;
+        }
+        Label3.Text = "";
+        return true;
+    }
     
 }
