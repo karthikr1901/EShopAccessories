@@ -66,5 +66,34 @@ public partial class feedback : System.Web.UI.Page
         Label3.Text = "";
         return true;
     }
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (isValid())
+        {
+            cn.Open();
+            cm.CommandText = "select * from Customer where Email = '" + TextBox2.Text + "'";
+            cm.Connection = cn;
+            SqlDataReader DR2 = cm.ExecuteReader();
+            if (DR2.Read())
+            {
+                cn.Close();
+                cn.Open();
+                cmdd.CommandText = "insert into feedback (Feedback,EmailID,Posted) values ('" + TextBox1.Text + "', '" + TextBox2.Text + "', '" + System.DateTime.Now.ToString("yyyy-MMM-dd hh:mm:ss tt") + "')";
+                cmdd.Connection = cn;
+                cmdd.ExecuteNonQuery();
+                cn.Close();
+                Label3.Text = "Feedback posted successfully";
+                TextBox1.Text = TextBox2.Text = "";
+            }
+            else
+            {
+                Label3.Text = "Email ID does not exist!!! Please create an account!!!";
+            }
+            
+            cn.Close();
+            
+        }
+    }
     
 }
