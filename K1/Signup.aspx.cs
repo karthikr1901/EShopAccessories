@@ -74,6 +74,72 @@ public partial class Signup : System.Web.UI.Page
             //}
         }
     }
+
+    private void genpass()
+    {
+        //cn.ConnectionString = "Data Source = 172.23.197.6\\sql2008; Initial Catalog = Smart Accessories Inc.; User ID = sa; Password = PASSWORD@123";
+        cn.Open();
+        SqlDataAdapter da = new SqlDataAdapter("select * from  Customer ", cn);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+
+        int ctr, len;
+        //string codeval;
+
+        len = dt.Rows.Count - 1;
+        dr = dt.Rows[len];
+        code = dr["CustomerID"].ToString();
+        //codeval = code.Substring(1, 6);
+        //ctr = Convert.ToInt32(codeval);
+        ctr = Convert.ToInt32(code);
+        if ((ctr >= 1) && (ctr < 9))
+        {
+            ctr = ctr + 1;
+            Label9.Text = "P00000" + ctr;
+        }
+        else if ((ctr >= 9) && (ctr < 99))
+        {
+            ctr = ctr + 1;
+            Label9.Text = "P0000" + ctr;
+        }
+        else if ((ctr >= 99) && (ctr < 999))
+        {
+            ctr = ctr + 1;
+            Label9.Text = "P000" + ctr;
+        }
+        else if ((ctr >= 999) && (ctr < 9999))
+        {
+            ctr = ctr + 1;
+            Label9.Text = "P00" + ctr;
+        }
+        else if ((ctr >= 9999) && (ctr < 99999))
+        {
+            ctr = ctr + 1;
+            Label9.Text = "P0" + ctr;
+        }
+        else if (ctr >= 99999)
+        {
+            ctr = ctr + 1;
+            Label9.Text = "P" + ctr;
+        }
+        cn.Close();
+    }
+    private bool check()
+    {
+        cn.Open();
+        cm.CommandText = "select * from Customer where Email = '" + txtEmail.Text + "'";
+        cm.Connection = cn;
+        SqlDataReader DR2 = cm.ExecuteReader();
+        if (DR2.Read())
+        {
+            lblErrorMessage.Text = "Email ID already exists!!!";
+            return false;
+        }
+        cn.Close();
+
+        return true;
+
+    }
 }
 
 
