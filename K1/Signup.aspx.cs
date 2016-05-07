@@ -140,7 +140,58 @@ public partial class Signup : System.Web.UI.Page
         return true;
 
     }
+
+    private bool isValidSubmit()
+    {
+        char[] names = txtMobile.Text.ToCharArray();
+
+        if (txtName.Text.Trim() == "")
+        {
+            lblErrorMessage.Text = "Please Enter Name";
+            return false;
+        }
+
+        else if (txtAddress.Text.Trim() == "")
+        {
+            lblErrorMessage.Text = "Please Enter Address";
+            return false;
+        }
+        else if (txtCity.Text.Trim() == "")
+        {
+            lblErrorMessage.Text = "Please Enter City";
+            return false;
+        }
+        else if (txtMobile.Text.Trim() == "")
+        {
+            lblErrorMessage.Text = "Please Enter Mobile Number";
+            return false;
+        }
+        else if (txtMobile.Text.Length != 10)
+        {
+            lblErrorMessage.Text = "Please Enter 10 digits for Mobile Number";
+            return false;
+        }
+        if (names[0] != '7' && names[0] != '8' && names[0] != '9')
+        {
+            lblErrorMessage.Text = "Please Enter a valid mobile number";
+            return false;
+        }
+        else if (txtEmail.Text.Trim() == "")
+        {
+            lblErrorMessage.Text = "Please Enter Email id";
+            return false;
+        }
+
+        lblErrorMessage.Text = "";
+        return true;
+    }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Login.aspx");
+    }
 }
+
+
 
 
 
