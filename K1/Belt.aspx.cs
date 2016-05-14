@@ -28,6 +28,22 @@ public partial class Belt : System.Web.UI.Page
             Disp();
         //}
     } 
+    protected void check()
+    {
+        if (Session["click"].ToString() == "Belts")
+        {
+            TextBox1.Text = "select * from product where category = 'Belts'";
+            //da = new SqlDataAdapter("select * from product where category = 'Belts'", cn);
+        }
+        else if (Session["click"].ToString() == "Watches")
+        {
+            TextBox1.Text = "select * from product where category = 'Watches'";
+            //da = new SqlDataAdapter("select * from product where category = 'Watches'", cn);
+        }
+        else if (Session["click"].ToString() == "Wallets")
+        {
+            TextBox1.Text = "select * from product where category = 'Wallets'";
+            //da = new SqlDataAdapter("select * from product where category = 'Wallets'", cn);
+        }
+    }
 }
-
-
