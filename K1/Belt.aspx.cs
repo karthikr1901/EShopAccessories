@@ -45,5 +45,25 @@ public partial class Belt : System.Web.UI.Page
             TextBox1.Text = "select * from product where category = 'Wallets'";
             //da = new SqlDataAdapter("select * from product where category = 'Wallets'", cn);
         }
+        else if (Session["click"].ToString() == "Pens")
+        {
+            TextBox1.Text = "select * from product where category = 'Pens'";
+            //da = new SqlDataAdapter("select * from product where category = 'Pens'", cn);
+        }
+        else if (Session["click"].ToString() == "Sunglasses")
+        {
+            TextBox1.Text = "select * from product where category = 'Sunglasses'";
+            //da = new SqlDataAdapter("select * from product where category = 'Sunglasses'", cn);
+        }
+        else if (Session["click"].ToString() == "Bags")
+        {
+            TextBox1.Text = "select * from product where category = 'Bags'";
+            //da = new SqlDataAdapter("select * from product where category = 'Sunglasses'", cn);
+        }
+        else if (Session["click"].ToString() == "Shoes")
+        {
+            TextBox1.Text = "select * from product where category = 'Shoes'";
+            //da = new SqlDataAdapter("select * from product where category = 'Sunglasses'", cn);
+        }
     }
 }
