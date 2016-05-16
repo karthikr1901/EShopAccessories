@@ -66,4 +66,24 @@ public partial class Belt : System.Web.UI.Page
             //da = new SqlDataAdapter("select * from product where category = 'Sunglasses'", cn);
         }
     }
+
+    protected void Disp()
+    {
+        Panel1.Controls.Clear();
+        da = new SqlDataAdapter(TextBox1.Text, cn);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        int rows = dt.Rows.Count;
+
+
+        if (rows % 3 != 0)
+            a = (rows / 3) + 1;
+        else a = (rows / 3);
+
+        Table t = new Table();
+
+        int x = dt.Rows.Count;
+        
+    }
+
 }
