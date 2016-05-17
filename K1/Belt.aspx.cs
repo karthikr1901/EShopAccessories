@@ -83,7 +83,23 @@ public partial class Belt : System.Web.UI.Page
         Table t = new Table();
 
         int x = dt.Rows.Count;
-        
+        while (x + 2 >= 0)
+        {
+            TableRow tr = new TableRow();
+
+            TableCell tc1 = new TableCell();
+            TableCell tc2 = new TableCell();
+            TableCell tc3 = new TableCell();
+            tc1.Attributes.Add("align", "center");
+            tc2.Attributes.Add("align", "center");
+            tc3.Attributes.Add("align", "center");
+
+
+            ImageButton imgbtn1 = new ImageButton();
+            ImageButton imgbtn2 = new ImageButton();
+            ImageButton imgbtn3 = new ImageButton();
+	}
+
     }
 
 }
