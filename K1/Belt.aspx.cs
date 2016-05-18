@@ -98,6 +98,19 @@ public partial class Belt : System.Web.UI.Page
             ImageButton imgbtn1 = new ImageButton();
             ImageButton imgbtn2 = new ImageButton();
             ImageButton imgbtn3 = new ImageButton();
+
+            try
+            {
+                imgbtn1.ImageUrl = dt.Rows[x]["Pic"].ToString();
+                imgbtn1.Height = 250; imgbtn1.Width = 200;
+                tc1.Controls.Add(imgbtn1);
+                imgbtn1.ID = dt.Rows[x]["PicID"].ToString();
+               // imgbtn1.Click += new ImageClickEventHandler(imgbtn_Click);
+                imgbtn1.Click += new ImageClickEventHandler(imgbtn_Click);
+                //tc1.Controls.Add(imgbtn1);
+
+            }
+            catch { }
 	}
 
     }
