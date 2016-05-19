@@ -111,6 +111,18 @@ public partial class Belt : System.Web.UI.Page
 
             }
             catch { }
+            try
+            {
+                imgbtn2.ImageUrl = dt.Rows[x + 1]["Pic"].ToString();
+                imgbtn2.Height = 250; imgbtn2.Width = 200;
+                tc2.Controls.Add(imgbtn2);              
+                imgbtn2.ID = dt.Rows[x + 1]["PicID"].ToString();
+                //imgbtn2.Click += new ImageClickEventHandler(imgbtn_Click);
+                imgbtn2.Click += new ImageClickEventHandler(imgbtn_Click);
+                //tc2.Controls.Add(imgbtn2);
+
+            }
+            catch { }
 	}
 
     }
