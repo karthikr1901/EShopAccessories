@@ -135,8 +135,17 @@ public partial class Belt : System.Web.UI.Page
 
             }
             catch { }
-	}
 
+            tr.Cells.Add(tc3);
+            tr.Cells.Add(tc2);            
+            tr.Cells.Add(tc1);
+
+            t.Rows.Add(tr);
+
+            x = x - 3;
+
+        }
+        Panel1.Controls.Add(t);
     }
 
 }
