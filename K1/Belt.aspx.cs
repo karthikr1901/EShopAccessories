@@ -146,6 +146,15 @@ public partial class Belt : System.Web.UI.Page
 
         }
         Panel1.Controls.Add(t);
+
+
+    }
+
+    protected void imgbtn_Click(object sender, ImageClickEventArgs e)
+    {
+        ImageButton imgbt = (ImageButton)sender;
+        Session["prodid"] = imgbt.ID;
+        Response.Redirect("detail.aspx");
     }
 
 }
