@@ -157,4 +157,33 @@ public partial class Belt : System.Web.UI.Page
         Response.Redirect("detail.aspx");
     }
 
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        TextBox1.Text = "";
+        check();
+        if (CheckBox1.Checked == true || CheckBox2.Checked == true || CheckBox3.Checked == true)
+        {
+            TextBox1.Text = TextBox1.Text + " and (";
+            if (CheckBox1.Checked == true)
+            {
+                TextBox1.Text = TextBox1.Text + "category1 = 'M'";
+                if (CheckBox2.Checked == true || CheckBox3.Checked == true)
+                    TextBox1.Text = TextBox1.Text + " or ";
+            }
+
+            if (CheckBox2.Checked == true)
+            {
+                TextBox1.Text = TextBox1.Text + "category1 = 'W'";
+                if (CheckBox3.Checked == true)
+                    TextBox1.Text = TextBox1.Text + " or ";
+            }
+
+            if (CheckBox3.Checked == true)
+                TextBox1.Text = TextBox1.Text + "category1 = 'K'";
+            TextBox1.Text = TextBox1.Text + ")";
+        }
+              
+    }
 }
+
+
