@@ -182,8 +182,23 @@ public partial class Belt : System.Web.UI.Page
                 TextBox1.Text = TextBox1.Text + "category1 = 'K'";
             TextBox1.Text = TextBox1.Text + ")";
         }
-              
+
+        if (CheckBox4.Checked == true || CheckBox5.Checked == true || CheckBox6.Checked == true || CheckBox7.Checked == true || CheckBox8.Checked == true)
+        {
+            TextBox1.Text = TextBox1.Text + " and (";
+            if (CheckBox4.Checked == true)
+            {
+                TextBox1.Text = TextBox1.Text + "Price between 0 and 2499";
+                if (CheckBox5.Checked == true || CheckBox6.Checked == true || CheckBox7.Checked == true || CheckBox8.Checked == true)
+                    TextBox1.Text = TextBox1.Text + " or ";
+            }
+            
+        }
+   
     }
 }
+
+
+
 
 
