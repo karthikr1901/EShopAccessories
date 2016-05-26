@@ -199,6 +199,13 @@ public partial class Belt : System.Web.UI.Page
                 if (CheckBox6.Checked == true || CheckBox7.Checked == true || CheckBox8.Checked == true)
                     TextBox1.Text = TextBox1.Text + " or ";
             }
+
+            if (CheckBox6.Checked == true)
+            {
+                TextBox1.Text = TextBox1.Text + "Price between 5501 and 8500";
+                if (CheckBox7.Checked == true || CheckBox8.Checked == true)
+                    TextBox1.Text = TextBox1.Text + " or ";
+            }
             
         }
    
