@@ -213,13 +213,15 @@ public partial class Belt : System.Web.UI.Page
                 if (CheckBox8.Checked == true)
                     TextBox1.Text = TextBox1.Text + " or ";
             }
-            
+
+            if (CheckBox8.Checked == true)
+                TextBox1.Text = TextBox1.Text + "Price > 11500";
+
+            TextBox1.Text = TextBox1.Text + ")";
         }
-   
+
+        Disp();        
     }
 }
-
-
-
 
 
