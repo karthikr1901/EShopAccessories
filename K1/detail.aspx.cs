@@ -23,4 +23,17 @@ public partial class detail : System.Web.UI.Page
     {
         
     }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (Session["K"] != null)
+        {
+            cn.Open();
+            cm = new SqlCommand("insert into Cart values('" + productid + "','" + userid + "' , '" + Label3.Text + "' , '" + System.DateTime.Now.ToString("yyyy-MMM-dd hh:mm:ss tt") + "' , '" + Label4.Text + "' )", cn);
+            cm.ExecuteNonQuery();
+            cn.Close();
+            DisplayCartCount();
+        }
+        else
+            Response.Redirect("Login.aspx");
+    }
 }
