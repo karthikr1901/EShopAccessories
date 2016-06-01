@@ -36,4 +36,13 @@ public partial class detail : System.Web.UI.Page
         else
             Response.Redirect("Login.aspx");
     }
+    private void DisplayCartCount()
+    {
+        cn.Open();
+        SqlCommand cmd = new SqlCommand("select count(*) from cart where CustomerID='" + Session["K"].ToString() + "'", cn);
+        int x = int.Parse(cmd.ExecuteScalar().ToString());
+        cn.Close();
+        LinkButton lb = (LinkButton)Master.FindControl("LinkButton8");
+        lb.Text = Convert.ToString(x);
+    }
 }
