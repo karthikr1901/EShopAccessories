@@ -27,10 +27,17 @@ public partial class detail : System.Web.UI.Page
         SqlDataReader DR1 = cmd.ExecuteReader();
         if (DR1.Read())
         {
-            TextBox2.Text =
+            //TextBox2.Text =
             Image1.ImageUrl = DR1.GetValue(7).ToString(); ;
             Label1.Text = DR1.GetValue(2).ToString();
+            Label3.Text = DR1.GetValue(3).ToString();
+            Label3.Text = DR1.GetValue(3).ToString();
+            Label4.Text = DR1.GetValue(1).ToString();
+            Label5.Text = DR1.GetValue(5).ToString();
+            Label6.Text = DR1.GetValue(6).ToString(); 
         }
+        cn.Close();
+
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
