@@ -21,7 +21,16 @@ public partial class detail : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        
+        cmd.CommandText = "select * from product where PicID = '" + TextBox1.Text + "'  ";
+        cmd.Connection = cn;
+
+        SqlDataReader DR1 = cmd.ExecuteReader();
+        if (DR1.Read())
+        {
+            TextBox2.Text =
+            Image1.ImageUrl = DR1.GetValue(7).ToString(); ;
+            Label1.Text = DR1.GetValue(2).ToString();
+        }
     }
     protected void Button1_Click(object sender, EventArgs e)
     {
