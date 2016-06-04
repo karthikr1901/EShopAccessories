@@ -21,6 +21,16 @@ public partial class detail : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
+        TextBox2.Visible = false;
+        TextBox1.Visible = false;
+        TextBox1.Text = Convert.ToString(Session["prodid"]);
+        TextBox2.Text = Convert.ToString(Session["K"]);
+        productid = TextBox1.Text;
+        userid = TextBox2.Text;
+
+
+        cn.Open();
+
         cmd.CommandText = "select * from product where PicID = '" + TextBox1.Text + "'  ";
         cmd.Connection = cn;
 
