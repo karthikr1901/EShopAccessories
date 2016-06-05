@@ -31,6 +31,16 @@ public partial class detail : System.Web.UI.Page
 
         cn.Open();
 
+        SqlDataAdapter da = new SqlDataAdapter("select * from product where PicID = '" + TextBox1.Text + "'  ", cn);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        double cost = 0, discount = 0, finalprice = 0;
+
+        Image1.ImageUrl = dt.Rows[0]["Pic"].ToString();
+        Label4.Text = dt.Rows[0]["Name"].ToString();
+        Label1.Text = dt.Rows[0]["Description"].ToString();
+        Label5.Text = dt.Rows[0]["Brand"].ToString();
+
         cmd.CommandText = "select * from product where PicID = '" + TextBox1.Text + "'  ";
         cmd.Connection = cn;
 
