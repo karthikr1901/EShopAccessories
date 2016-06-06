@@ -41,21 +41,29 @@ public partial class detail : System.Web.UI.Page
         Label1.Text = dt.Rows[0]["Description"].ToString();
         Label5.Text = dt.Rows[0]["Brand"].ToString();
 
-        cmd.CommandText = "select * from product where PicID = '" + TextBox1.Text + "'  ";
-        cmd.Connection = cn;
+        cost = double.Parse(dt.Rows[0]["Price"].ToString());
+        discount = double.Parse(dt.Rows[0]["Discount"].ToString());
+        finalprice = cost - (cost * (discount / 100));
 
-        SqlDataReader DR1 = cmd.ExecuteReader();
-        if (DR1.Read())
-        {
-            //TextBox2.Text =
-            Image1.ImageUrl = DR1.GetValue(7).ToString(); ;
-            Label1.Text = DR1.GetValue(2).ToString();
-            Label3.Text = DR1.GetValue(3).ToString();
-            Label3.Text = DR1.GetValue(3).ToString();
-            Label4.Text = DR1.GetValue(1).ToString();
-            Label5.Text = DR1.GetValue(5).ToString();
-            Label6.Text = DR1.GetValue(6).ToString(); 
-        }
+        lblCost.Text = cost.ToString();
+        lblDiscount.Text = discount.ToString() + " %";
+        Label3.Text = finalprice.ToString();
+
+        //cmd.CommandText = "select * from product where PicID = '" + TextBox1.Text + "'  ";
+        //cmd.Connection = cn;
+
+        //SqlDataReader DR1 = cmd.ExecuteReader();
+        //if (DR1.Read())
+        //{
+        //    //TextBox2.Text =
+        //    Image1.ImageUrl = DR1.GetValue(7).ToString(); ;
+        //    Label1.Text = DR1.GetValue(2).ToString();
+        //    Label3.Text = DR1.GetValue(3).ToString();
+        //    //Label3.Text = DR1.GetValue(3).ToString();
+        //    Label4.Text = DR1.GetValue(1).ToString();
+        //    //Label5.Text = DR1.GetValue(5).ToString();
+        //    //Label6.Text = DR1.GetValue(6).ToString(); 
+        //}
         cn.Close();
 
     }
