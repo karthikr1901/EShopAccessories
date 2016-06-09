@@ -26,6 +26,14 @@ public partial class Cart : System.Web.UI.Page
         
         if (!IsPostBack)
         {
+            Button1.Visible = false;
+            Label8.Visible = false;
+            Label9.Visible = false;
+            Label10.Visible = false;
+            Label11.Visible = false;
+            Label13.Visible = false;
+            Label14.Visible = false;
+            txtName.Visible = false;
 	}        
     }
 
