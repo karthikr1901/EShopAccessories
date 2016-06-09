@@ -16,10 +16,17 @@ public partial class Cart : System.Web.UI.Page
     SqlDataAdapter da;
     DataTable dt;
     SqlCommand cm = new SqlCommand();
-    string productid = "", userid = "";
+    string productid = "", userid = "";"";
     protected void Page_Load(object sender, EventArgs e)
     {
+        TextBox9.Visible = false;
+        TextBox1.Visible = false;  
+        TextBox1.Text = Convert.ToString(Session["prodid"]);
+        TextBox9.Text = Convert.ToString(Session["K"]);
         
+        if (!IsPostBack)
+        {
+	}        
     }
 
 }
