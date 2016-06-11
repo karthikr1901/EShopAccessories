@@ -34,7 +34,18 @@ public partial class Cart : System.Web.UI.Page
             Label13.Visible = false;
             Label14.Visible = false;
             txtName.Visible = false;
-	}        
+            TextBox11.Visible = false;
+            TextBox12.Visible = false;
+            TextBox13.Visible = false;
+            TextBox14.Visible = false;
+            TextBox15.Visible = false;
+            txtCVV.Visible = false;
+            TextBox18.Visible = false;
+            DropDownList2.Visible = false;
+            DropDownList3.Visible = false;
+            RadioButtonList2.Visible = false;
+            FillGrid();
+        }
     }
 
 }
