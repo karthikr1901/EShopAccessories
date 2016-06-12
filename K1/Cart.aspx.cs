@@ -46,6 +46,19 @@ public partial class Cart : System.Web.UI.Page
             RadioButtonList2.Visible = false;
             FillGrid();
         }
+        //TextBox10.Text = RadioButtonList1.SelectedItem.Text;
+
+        //if (RadioButtonList1.se)
+    }
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+        if (isValidSubmit())
+        {
+            productid = TextBox1.Text;
+            userid = TextBox9.Text;
+            cn.Open();
+            da = new SqlDataAdapter("select * from cart where CustomerID='" + userid + "'", cn);
+	}
     }
 
 }
