@@ -58,6 +58,14 @@ public partial class Cart : System.Web.UI.Page
             userid = TextBox9.Text;
             cn.Open();
             da = new SqlDataAdapter("select * from cart where CustomerID='" + userid + "'", cn);
+            dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow row in dt.Rows)
+            {
+                //cmd = new SqlCommand("select Price from Product where PicID='" + productid + "'", cn);
+                //double amt = double.Parse(cmd.ExecuteScalar().ToString());
+                //double finalamt = amt * int.Parse(row["count"].ToString());
+            }
 	}
     }
 
