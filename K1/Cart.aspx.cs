@@ -18,12 +18,7 @@ public partial class Cart : System.Web.UI.Page
     SqlCommand cm = new SqlCommand();
     string productid = "", userid = "";"";
     protected void Page_Load(object sender, EventArgs e)
-    {
-        TextBox9.Visible = false;
-        TextBox1.Visible = false;  
-        TextBox1.Text = Convert.ToString(Session["prodid"]);
-        TextBox9.Text = Convert.ToString(Session["K"]);
-        
+    {        
         if (!IsPostBack)
         {
             Button1.Visible = false;
@@ -65,6 +60,9 @@ public partial class Cart : System.Web.UI.Page
                 //cmd = new SqlCommand("select Price from Product where PicID='" + productid + "'", cn);
                 //double amt = double.Parse(cmd.ExecuteScalar().ToString());
                 //double finalamt = amt * int.Parse(row["count"].ToString());
+                //cmd = new SqlCommand("insert into Purchase (CustomerID,PicID,Count,Price,Date) values('" + userid + "','" + row["productid"].ToString() + "','" + row["count"].ToString() + "','" + finalamt + "','" + System.DateTime.Now.ToString("yyyy-MMM-dd hh:mm:ss tt") + "')", cn);
+                cmd = new SqlCommand("insert into Purchase (CustomerID,PicID,Name,Price,Date) values('" + row[2].ToString() + "','" + row[1].ToString() + "','" + row[5].ToString() + "','" + row[3].ToString() + "','" + System.DateTime.Now.ToString("yyyy-MMM-dd hh:mm:ss tt") + "')", cn);
+                cmd.ExecuteNonQuery();
             }
 	}
     }
