@@ -19,6 +19,12 @@ public partial class Cart : System.Web.UI.Page
     string productid = "", userid = "";"";
     protected void Page_Load(object sender, EventArgs e)
     {        
+        TextBox9.Visible = false;
+        TextBox1.Visible = false;  
+        TextBox1.Text = Convert.ToString(Session["prodid"]);
+        TextBox9.Text = Convert.ToString(Session["K"]);
+        
+
         if (!IsPostBack)
         {
             Button1.Visible = false;
@@ -63,8 +69,14 @@ public partial class Cart : System.Web.UI.Page
                 //cmd = new SqlCommand("insert into Purchase (CustomerID,PicID,Count,Price,Date) values('" + userid + "','" + row["productid"].ToString() + "','" + row["count"].ToString() + "','" + finalamt + "','" + System.DateTime.Now.ToString("yyyy-MMM-dd hh:mm:ss tt") + "')", cn);
                 cmd = new SqlCommand("insert into Purchase (CustomerID,PicID,Name,Price,Date) values('" + row[2].ToString() + "','" + row[1].ToString() + "','" + row[5].ToString() + "','" + row[3].ToString() + "','" + System.DateTime.Now.ToString("yyyy-MMM-dd hh:mm:ss tt") + "')", cn);
                 cmd.ExecuteNonQuery();
+                //after inserting the product into history table, delete that product from cart table
+                cmd = new SqlCommand("delete from Cart where CustomerID='" + row[2].ToString() + "' and PicID='" + row[1].ToString() + "'", cn);
+                cmd.ExecuteNonQuery();
+                lblErrorMessage.Text = "You have purchased your products!!!! Will be delivered within 3-5 working days";
             }
-	}
+            cn.Close();
+        }
+        FillGrid();
     }
 
 }
