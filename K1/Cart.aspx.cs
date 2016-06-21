@@ -79,6 +79,17 @@ public partial class Cart : System.Web.UI.Page
         FillGrid();
     }
 
+    private void FillGrid()
+    {
+        cn.Open();
+        da = new SqlDataAdapter("select * from Cart", cn);
+        dt = new DataTable();
+        da.Fill(dt);
+        gvTest.DataSource = dt;
+        gvTest.DataBind();
+        cm = new SqlCommand("select Sum(Price) As Total from Cart where CustomerID ='" + TextBox9.Text + "'", cn);
+    }
+
 }
 
 
