@@ -88,6 +88,12 @@ public partial class Cart : System.Web.UI.Page
         gvTest.DataSource = dt;
         gvTest.DataBind();
         cm = new SqlCommand("select Sum(Price) As Total from Cart where CustomerID ='" + TextBox9.Text + "'", cn);
+        Label2.Text = Convert.ToString(cm.ExecuteScalar());
+        //da1 = new SqlDataAdapter("select Sum(Price) As Total from Cart where CustomerID ='" + TextBox2.Text + "'", cn);
+        //dt1 = new DataTable();
+        //da.Fill(dt);        
+        //Label2.Text = dt1.Rows[0].ToString();
+        cn.Close();
     }
 
 }
