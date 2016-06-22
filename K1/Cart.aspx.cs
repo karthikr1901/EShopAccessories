@@ -96,6 +96,16 @@ public partial class Cart : System.Web.UI.Page
         cn.Close();
     }
 
+    protected void imgDelte_Click(object sender, EventArgs e)
+    {
+        // Get the Clicked Imagebutton
+        ImageButton imgbtn = new ImageButton();
+        imgbtn = (ImageButton)sender;
+
+        //get the Clicked imagebutton's row
+        GridViewRow row = (GridViewRow)imgbtn.Parent.Parent;
+    }
+
 }
 
 
