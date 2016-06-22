@@ -104,6 +104,15 @@ public partial class Cart : System.Web.UI.Page
 
         //get the Clicked imagebutton's row
         GridViewRow row = (GridViewRow)imgbtn.Parent.Parent;
+
+        Label lblRandom = new Label();
+        lblRandom = (Label)row.FindControl("lblRandom");
+        //random number will be in the second cell, get the clicked row's randomnumber
+        string strRandomNo = lblRandom.Text;
+        //delete the particular record
+        Delete(strRandomNo);
+        //fill the grid again to reflect 
+        FillGrid();
     }
 
 }
