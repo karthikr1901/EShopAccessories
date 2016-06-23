@@ -121,6 +121,13 @@ public partial class Cart : System.Web.UI.Page
         cmd.ExecuteNonQuery();
         cn.Close();
     }
+    protected void lblNo_Click(object sender, EventArgs e)
+    {
+        LinkButton lbl = new LinkButton();
+        lbl = (LinkButton)sender;
+        Session["prodid"] = lbl.Text;
+        Response.Redirect("detail.aspx");
+    }
 
 }
 
