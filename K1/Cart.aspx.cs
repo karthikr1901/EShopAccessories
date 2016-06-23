@@ -114,6 +114,13 @@ public partial class Cart : System.Web.UI.Page
         //fill the grid again to reflect 
         FillGrid();
     }
+    private void Delete(string RandomNo)
+    {
+        cn.Open();
+        cmd = new SqlCommand("delete from Cart where Random ='" + RandomNo + "'", cn);
+        cmd.ExecuteNonQuery();
+        cn.Close();
+    }
 
 }
 
