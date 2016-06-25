@@ -151,6 +151,26 @@ public partial class Cart : System.Web.UI.Page
             DropDownList3.Visible = false;
             RadioButtonList2.Visible = false;
         }
+        else
+        {
+            Button1.Visible = true;
+            Label8.Visible = true;
+            Label9.Visible = true;
+            Label10.Visible = true;
+            Label11.Visible = true;
+            Label13.Visible = true;
+            Label14.Visible = true;
+            txtName.Visible = true;
+            TextBox11.Visible = true;
+            TextBox12.Visible = true;
+            TextBox13.Visible = true;
+            TextBox14.Visible = true;
+            txtCVV.Visible = true;
+            TextBox18.Visible = true;
+            DropDownList2.Visible = true;
+            DropDownList3.Visible = true;
+            RadioButtonList2.Visible = true;
+        }
 
     }
 
