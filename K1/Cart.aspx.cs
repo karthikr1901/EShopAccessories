@@ -128,6 +128,31 @@ public partial class Cart : System.Web.UI.Page
         Session["prodid"] = lbl.Text;
         Response.Redirect("detail.aspx");
     }
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        if (RadioButtonList1.SelectedItem.Text == "Net Banking")
+        {
+            Button1.Visible = true;
+            Label8.Visible = true;
+            Label14.Visible = true;
+            txtName.Visible = true;
+            TextBox18.Visible = true;            
+            Label9.Visible = false;
+            Label10.Visible = false;
+            Label11.Visible = false;
+            Label13.Visible = false;
+            TextBox11.Visible = false;
+            TextBox12.Visible = false;
+            TextBox13.Visible = false;
+            TextBox14.Visible = false;
+            TextBox15.Visible = false;
+            txtCVV.Visible = false;
+            DropDownList2.Visible = false;
+            DropDownList3.Visible = false;
+            RadioButtonList2.Visible = false;
+        }
+
+    }
 
 }
 
