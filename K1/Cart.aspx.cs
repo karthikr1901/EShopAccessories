@@ -86,6 +86,20 @@ public partial class Cart : System.Web.UI.Page
             lblErrorMessage.Text = "Please Select Mode of Payment";
             return false;
         }       
+        
+        if(RadioButtonList1.SelectedItem.Text == "Net Banking")
+        {
+             if (txtName.Text.Trim() == "")
+             {
+                  lblErrorMessage.Text = "Please Enter Name";
+                  return false;
+             }
+             else if (TextBox18.Text.Trim() == "")
+             {
+                  lblErrorMessage.Text = "Please Enter Password";
+                  return false;
+             }
+        }
     }
 
     private void FillGrid()
