@@ -79,6 +79,15 @@ public partial class Cart : System.Web.UI.Page
         FillGrid();
     }
 
+    private bool isValidSubmit()
+    {
+        if (RadioButtonList1.SelectedItem.Text == "")
+        {
+            lblErrorMessage.Text = "Please Select Mode of Payment";
+            return false;
+        }       
+    }
+
     private void FillGrid()
     {
         cn.Open();
