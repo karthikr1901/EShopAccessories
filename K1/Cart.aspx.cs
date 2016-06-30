@@ -100,6 +100,23 @@ public partial class Cart : System.Web.UI.Page
                   return false;
              }
         }
+
+        if(RadioButtonList1.SelectedItem.Text != "Net Banking")
+        {
+            if (txtName.Text.Trim() == "")
+            {
+                lblErrorMessage.Text = "Please Enter Name";
+                return false;
+            }
+            else if (RadioButtonList2.SelectedItem.Text == "")
+            {
+                lblErrorMessage.Text = "Please Select Card Type";
+                return false;
+            }
+            
+        }
+        lblErrorMessage.Text = "";
+        return true;
     }
 
     private void FillGrid()
