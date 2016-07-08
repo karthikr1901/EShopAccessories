@@ -140,6 +140,12 @@ public partial class Cart : System.Web.UI.Page
                 }
             }
             
+            else if (DropDownList2.SelectedItem.Text == "MM")
+            {
+                lblErrorMessage.Text = "Please Select a Month";
+                return false;
+            }
+            
         }
         lblErrorMessage.Text = "";
         return true;
