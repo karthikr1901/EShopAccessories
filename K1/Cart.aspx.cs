@@ -150,6 +150,11 @@ public partial class Cart : System.Web.UI.Page
             //    lblErrorMessage.Text = "Please Select a Month";
             //    return false;
             //}
+            else if (DropDownList3.SelectedItem.Text == "YYYY")
+            {
+                lblErrorMessage.Text = "Please Select a Year";
+                return false;
+            }
             
         }
         lblErrorMessage.Text = "";
