@@ -155,6 +155,11 @@ public partial class Cart : System.Web.UI.Page
                 lblErrorMessage.Text = "Please Select a Year";
                 return false;
             }
+            //else if (Convert.ToInt32(DropDownList3.SelectedItem.Text) >= System.DateTime.Now.Year)
+            //{
+            //    lblErrorMessage.Text = "Please Select a Year";
+            //    return false;
+            //}
             
         }
         lblErrorMessage.Text = "";
