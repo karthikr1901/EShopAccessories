@@ -165,6 +165,11 @@ public partial class Cart : System.Web.UI.Page
                 lblErrorMessage.Text = "Please Enter CVV";
                 return false;
             }
+            else if (txtCVV.Text.Length != 3)
+            {
+                lblErrorMessage.Text = "Please Enter CVV";
+                return false;
+            }
             
         }
         lblErrorMessage.Text = "";
