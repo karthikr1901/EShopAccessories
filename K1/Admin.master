@@ -1,0 +1,115 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style3
+        {
+            color: #BBBBBB;
+            }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table width="990" border="0" cellspacing="0" cellpadding="0" align="center">
+        <tr>
+            <td height="531" align="left" valign="top">
+                <table width="990" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td height="85" align="left" valign="top" class="menu">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="20%" height="85">
+                                        <%--<a href="Default2.aspx">
+                                            <img src="images/onstore.jpg" alt="" width="201" height="85" border="0"></a>--%>
+                                        <asp:ImageButton ID="ImageButton1" runat="server" src="images/onstore.jpg" Width="201"
+                                            Height="85" OnClick="ImageButton1_Click" />
+                                    </td>
+                                    <td width="80%">
+                                        <table width="790" border="0" cellspacing="0" cellpadding="0">
+                                            <tr>
+                                                <td width="61" height="25" align="center">
+                                                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+                                                </td>
+                                                <td width="10">
+                                                    <a href="Default2.aspx">
+                                                        <img src="images/spacer.gif" alt="" width="10" height="10" border="0"></a>
+                                                </td>
+                                                <td width="245" align="center" class="txt">
+                                                    <asp:Label ID="sc" Text="Shopping cart:" runat="server"></asp:Label>
+                                                    <a href="Default2.aspx" id="wht2">
+                                                        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click"></asp:LinkButton>
+                                                    </a>&nbsp;
+                                                </td>
+                                                <td width="14">
+                                                    <a href="Default2.aspx">
+                                                        <img src="images/spacer.gif" alt="" width="10" height="10" border="0"></a>
+                                                </td>
+                                                <td width="182" align="center" class="txt">
+                                                    &nbsp;<asp:LinkButton ID="LinkButton13" runat="server" OnClick="LinkButton13_Click">Home</asp:LinkButton>
+                                                </td>
+                                                <td width="14">
+                                                    &nbsp;
+                                                </td>
+                                                <td width="263" class="txt">
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                    <asp:LinkButton ID="LinkButton16"
+                                    runat="server" OnClick="LinkButton16_Click">MainPage</asp:LinkButton>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                        <td height="649" align="left" valign="top" class="tbody">
+                            <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                                <tr align="left" valign="top">
+                                    <td style="width: 100%;">
+                                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                        </asp:ContentPlaceHolder>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="58" class="footer">
+                            <table width="989" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td width="458" height="25" align="right" class="txt">
+                                        <asp:LinkButton ID="LinkButton17" runat="server" OnClick="LinkButton13_Click">Home</asp:LinkButton>
+                                        &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; <a href="Default2.aspx" id="wht2">
+                                            <asp:LinkButton ID="LinkButton10" runat="server" OnClick="LinkButton1_Click">Login</asp:LinkButton>
+                                        </a>&nbsp;&nbsp; |&nbsp;&nbsp; <a href="Default2.aspx" id="wht2">
+                                            <asp:LinkButton ID="LinkButton9" runat="server" OnClick="LinkButton9_Click">Change Password</asp:LinkButton>
+                                        </a>&nbsp; &nbsp;|&nbsp;&nbsp; <a href="Default2.aspx" id="wht2">
+                                            <asp:LinkButton ID="LinkButton11" runat="server" OnClick="LinkButton11_Click">About Us</asp:LinkButton>
+                                        </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp; <a href="Default2.aspx" id="wht2">
+                                            <asp:LinkButton ID="LinkButton12" runat="server" OnClick="LinkButton12_Click">Contact Us</asp:LinkButton>
+                                        </a>&nbsp;
+                                    </td>
+                                    <td class="style3">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        Copyright &copy; 2014. All Rights Reserved
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
