@@ -14,6 +14,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
     SqlConnection cn = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
     protected void Page_Load(object sender, EventArgs e)
     {
+        sc.Visible = LinkButton2.Visible = false;
+        LinkButton13.Visible = false;
+        if (Session["K"] != null)
+        {
+        }
     }    
 }
 
