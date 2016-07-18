@@ -21,6 +21,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
             sc.Visible = LinkButton2.Visible = true;
             LinkButton1.Text = "Logout";
             cn.Open();
+            SqlCommand cmd = new SqlCommand("select count(*) from cart where CustomerID='" + Session["K"].ToString() + "'", cn);
+            int x = int.Parse(cmd.ExecuteScalar().ToString());
+            LinkButton2.Text = Convert.ToString(x);
         }
     }    
 }
