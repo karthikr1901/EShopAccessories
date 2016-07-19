@@ -25,6 +25,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
             int x = int.Parse(cmd.ExecuteScalar().ToString());
             LinkButton2.Text = Convert.ToString(x);
         }
+        if (Session["K"] != null)
+        {
+        }
     }    
 }
 
