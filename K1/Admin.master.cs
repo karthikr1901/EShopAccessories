@@ -24,9 +24,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
             SqlCommand cmd = new SqlCommand("select count(*) from cart where CustomerID='" + Session["K"].ToString() + "'", cn);
             int x = int.Parse(cmd.ExecuteScalar().ToString());
             LinkButton2.Text = Convert.ToString(x);
-        }
+
         if (Session["K"] != null)
         {
+        }
         }
     }    
 }
