@@ -30,11 +30,6 @@ public partial class MasterPage : System.Web.UI.MasterPage
             LinkButton13.Visible = true;
             sc.Visible = LinkButton2.Visible = false;
         }
-        if ((string)Session["K"] == "10")
-        {
-            LinkButton13.Visible = true;
-            sc.Visible = LinkButton2.Visible = false;
-        }
     }    
 }
 
