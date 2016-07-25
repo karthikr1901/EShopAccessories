@@ -30,6 +30,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
             LinkButton13.Visible = true;
             sc.Visible = LinkButton2.Visible = false;
         }
+    }
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
     }    
 }
 
