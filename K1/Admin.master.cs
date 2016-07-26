@@ -33,6 +33,11 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
     protected void LinkButton1_Click(object sender, EventArgs e)
     {
+        if (LinkButton1.Text == "Login")
+            Response.Redirect("Login.aspx");
+        else if (LinkButton1.Text == "Logout")
+        {
+        }
     }    
 }
 
