@@ -37,6 +37,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
             Response.Redirect("Login.aspx");
         else if (LinkButton1.Text == "Logout")
         {
+            //Session["K"] = null;
+            Session.Clear();
+            LinkButton1.Text = "Login";
+            Response.Redirect("Default2.aspx");
         }
     }    
 }
