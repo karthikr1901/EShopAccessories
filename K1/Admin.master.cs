@@ -51,5 +51,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         Response.Redirect("Change.aspx");
     }
+    protected void LinkButton11_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("About.aspx");
+    }
 }
 
