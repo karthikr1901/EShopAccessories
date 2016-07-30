@@ -47,5 +47,9 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         Response.Redirect("Cart.aspx");
     }
+    protected void LinkButton9_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Change.aspx");
+    }
 }
 
