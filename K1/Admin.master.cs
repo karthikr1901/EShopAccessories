@@ -61,6 +61,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
+        if ((string)Session["K"] == "10")
+        {
+            Response.Redirect("Load.aspx");
+        }
     }
 }
 
