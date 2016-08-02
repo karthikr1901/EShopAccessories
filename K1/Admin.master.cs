@@ -59,5 +59,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
     {
         Response.Redirect("Contact.aspx");
     }
+    protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
+    {
+    }
 }
 
