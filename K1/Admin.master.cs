@@ -70,5 +70,8 @@ public partial class MasterPage : System.Web.UI.MasterPage
             Response.Redirect("Default2.aspx");
         }
     }
+    protected void LinkButton13_Click(object sender, EventArgs e)
+    {
+    }
 }
 
