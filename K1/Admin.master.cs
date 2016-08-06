@@ -76,6 +76,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
         {
             Response.Redirect("Load.aspx");
         }
+        else
+        {
+            Response.Redirect("Default2.aspx");
+        }
     }
 }
 
