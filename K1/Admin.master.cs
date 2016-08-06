@@ -72,6 +72,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
     }
     protected void LinkButton13_Click(object sender, EventArgs e)
     {
+        if ((string)Session["K"] == "10")
+        {
+            Response.Redirect("Load.aspx");
+        }
     }
 }
 
