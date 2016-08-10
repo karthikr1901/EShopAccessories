@@ -15,6 +15,11 @@ public partial class AdminMaster : System.Web.UI.MasterPage
         cn.Open();
         if (Session["K"] != null)
         {
+            LinkButton1.Text = LinkButton10.Text = "Logout";
+            SqlCommand cmd = new SqlCommand("select count(*) from cart where CustomerID='" + Session["K"].ToString() + "'", cn);
+            int x = int.Parse(cmd.ExecuteScalar().ToString());
+            LinkButton8.Text = Convert.ToString(x);
+            cn.Close();
         }
     }
 }
