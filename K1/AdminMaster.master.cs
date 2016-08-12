@@ -21,5 +21,9 @@ public partial class AdminMaster : System.Web.UI.MasterPage
             LinkButton8.Text = Convert.ToString(x);
             cn.Close();
         }
+        if ((string)Session["K"] == "10")
+        {
+            sc.Visible = LinkButton8.Visible = false;
+        }
     }
 }
