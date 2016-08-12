@@ -25,5 +25,9 @@ public partial class AdminMaster : System.Web.UI.MasterPage
         {
             sc.Visible = LinkButton8.Visible = false;
         }
+        SqlDataAdapter da = new SqlDataAdapter("select * from master where position = 'Right Top'", cn);
+        SqlDataAdapter da1 = new SqlDataAdapter("select * from master where position = 'Right Bottom'", cn);
+        SqlDataAdapter da2 = new SqlDataAdapter("select * from master where position = 'Main Image'", cn);
+        
     }
 }
