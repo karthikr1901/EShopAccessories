@@ -28,6 +28,11 @@ public partial class AdminMaster : System.Web.UI.MasterPage
         SqlDataAdapter da = new SqlDataAdapter("select * from master where position = 'Right Top'", cn);
         SqlDataAdapter da1 = new SqlDataAdapter("select * from master where position = 'Right Bottom'", cn);
         SqlDataAdapter da2 = new SqlDataAdapter("select * from master where position = 'Main Image'", cn);
-        
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        DataTable dt1 = new DataTable();
+        da1.Fill(dt1);
+        DataTable dt2 = new DataTable();
+        da2.Fill(dt2);
     }
 }
