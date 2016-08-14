@@ -34,5 +34,9 @@ public partial class AdminMaster : System.Web.UI.MasterPage
         da1.Fill(dt1);
         DataTable dt2 = new DataTable();
         da2.Fill(dt2);
+
+        Image1.ImageUrl = dt2.Rows[0]["Pic"].ToString();
+        Image2.ImageUrl = dt.Rows[0]["Pic"].ToString();
+        Image3.ImageUrl = dt1.Rows[0]["Pic"].ToString();
     }
 }
