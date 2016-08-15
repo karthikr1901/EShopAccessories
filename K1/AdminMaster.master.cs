@@ -39,4 +39,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
         Image2.ImageUrl = dt.Rows[0]["Pic"].ToString();
         Image3.ImageUrl = dt1.Rows[0]["Pic"].ToString();
     }
+    protected void LinkButton2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Load.aspx");
+    }
 }
