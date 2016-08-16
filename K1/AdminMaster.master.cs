@@ -47,4 +47,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
         Response.Redirect("Load.aspx");
     }
+    protected void LinkButton14_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Users.aspx");
+    }
 }
