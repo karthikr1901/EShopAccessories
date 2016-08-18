@@ -51,4 +51,9 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
         Response.Redirect("Users.aspx");
     }
+    protected void LinkButton1_Click(object sender, EventArgs e)
+    {
+        if (LinkButton1.Text == "Login")
+            Response.Redirect("Login.aspx");
+    }
 }
