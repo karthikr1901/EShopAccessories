@@ -55,5 +55,13 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
         if (LinkButton1.Text == "Login")
             Response.Redirect("Login.aspx");
+        else if (LinkButton1.Text == "Logout")
+        {
+            //Session["K"] = null;
+            Session.Clear();
+            LinkButton1.Text = "Login";
+            Response.Redirect("Default2.aspx");
+
+        }
     }
 }
