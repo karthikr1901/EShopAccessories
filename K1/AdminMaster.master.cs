@@ -68,4 +68,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
 
     }
+    protected void LinkButton4_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Editt.aspx");
+    }
 }
