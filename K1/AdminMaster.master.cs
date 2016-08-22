@@ -72,4 +72,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
         Response.Redirect("Editt.aspx");
     }
+    protected void LinkButton5_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Purchase.aspx");
+    }
 }
