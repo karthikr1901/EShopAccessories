@@ -76,4 +76,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
         Response.Redirect("Purchase.aspx");
     }
+    protected void LinkButton6_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("OffersImage.aspx");
+    }
 }
