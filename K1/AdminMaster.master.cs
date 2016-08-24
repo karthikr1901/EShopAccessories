@@ -84,4 +84,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
         Response.Redirect("Change.aspx");
     }
+    protected void LinkButton15_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("feedback.aspx");
+    }
 }
