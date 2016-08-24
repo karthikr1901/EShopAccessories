@@ -80,4 +80,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
         Response.Redirect("OffersImage.aspx");
     }
+    protected void LinkButton9_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Change.aspx");
+    }
 }
