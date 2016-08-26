@@ -90,6 +90,10 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     }
     protected void LinkButton16_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default2.aspx");
+        Response.Redirect("Default2.as
+    protected void LinkButton11_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("About.aspx");
+    }px");
     }
 }
