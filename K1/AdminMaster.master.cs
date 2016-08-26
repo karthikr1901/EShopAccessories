@@ -88,4 +88,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     {
         Response.Redirect("feedback.aspx");
     }
+    protected void LinkButton16_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Default2.aspx");
+    }
 }
