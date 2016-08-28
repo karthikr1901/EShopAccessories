@@ -79,8 +79,7 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     protected void LinkButton6_Click(object sender, EventArgs e)
     {
         Response.Redirect("OffersImage.aspx");
-    }
-    protected void LinkButton9_Click(object sender, EventArgs e)
+    }protected void LinkButton9_Click(object sender, EventArgs e)
     {
         Response.Redirect("Change.aspx");
     }
@@ -90,10 +89,14 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     }
     protected void LinkButton16_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Default2.as
+        Response.Redirect("Default2.aspx");
+    }
     protected void LinkButton11_Click(object sender, EventArgs e)
     {
         Response.Redirect("About.aspx");
-    }px");
+    }
+    protected void LinkButton12_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Contact.aspx");
     }
 }
