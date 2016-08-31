@@ -10,6 +10,8 @@ using System.Web.Configuration;
 
 public partial class Editt : System.Web.UI.Page
 {
+    SqlConnection cn = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
+    SqlCommand cmd23 = new SqlCommand();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
