@@ -19,6 +19,16 @@ public partial class Editt : System.Web.UI.Page
             FillGrid();
         }
     }
+    private void FillGrid()
+    {
+        cn.Open();
+        SqlDataAdapter da = new SqlDataAdapter("select * from product", cn);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        gvTest.DataSource = dt;
+        gvTest.DataBind();
+        cn.Close();
+    }
 }
 
 
