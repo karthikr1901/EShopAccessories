@@ -29,6 +29,13 @@ public partial class Editt : System.Web.UI.Page
         gvTest.DataBind();
         cn.Close();
     }
+    protected void lblNo_Click(object sender, EventArgs e)
+    {
+        LinkButton lbl = new LinkButton();
+        lbl = (LinkButton)sender;
+        //char[] t = lbl.Text.ToCharArray();
+
+    }
 }
 
 
