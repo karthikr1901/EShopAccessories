@@ -34,6 +34,9 @@ public partial class Editt : System.Web.UI.Page
         LinkButton lbl = new LinkButton();
         lbl = (LinkButton)sender;
         //char[] t = lbl.Text.ToCharArray();
+        //if (t[0] == 'A')
+        //    Response.Write("Hi");
+        //else Response.Write("hello");
 
     }
 }
