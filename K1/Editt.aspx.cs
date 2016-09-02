@@ -38,6 +38,12 @@ public partial class Editt : System.Web.UI.Page
         //    Response.Write("Hi");
         //else Response.Write("hello");
 
+        //lbl is the clicked link button
+        //lbl.Text is the clicked product id
+        FillDetails(lbl.Text);
+        Session["lbl"] = lbl.Text;
+        btnSubmit.Enabled = true;
+
     }
 }
 
