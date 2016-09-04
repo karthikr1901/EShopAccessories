@@ -48,7 +48,10 @@ public partial class Editt : System.Web.UI.Page
     private void FillDetails(string ProductID)
     {
         cn.Open();
-        SqlDataAdapter da = new SqlDataAdapter("select * from product where PicID='" + ProductID + "'", cn);
+        SqlDataAdapter da = new SqlDataAdapter("select * from product where PicID='" + ProductID + "'"
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        txtProductID.Text = dt.Rows[0]["PicID"].ToString();
     }
 }
 
