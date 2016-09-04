@@ -45,6 +45,11 @@ public partial class Editt : System.Web.UI.Page
         btnSubmit.Enabled = true;
 
     }
+    private void FillDetails(string ProductID)
+    {
+        cn.Open();
+        SqlDataAdapter da = new SqlDataAdapter("select * from product where PicID='" + ProductID + "'", cn);
+    }
 }
 
 
