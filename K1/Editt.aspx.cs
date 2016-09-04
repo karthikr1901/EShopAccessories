@@ -52,7 +52,9 @@ public partial class Editt : System.Web.UI.Page
         DataTable dt = new DataTable();
         da.Fill(dt);
         txtProductID.Text = dt.Rows[0]["PicID"].ToString();
-    }
+        txtName.Text = dt.Rows[0]["Name"].ToString();
+        txtDesc.Text = dt.Rows[0]["Description"].ToString();
+        txtPrice.Text = dt.Rows[0]["Price"].ToString();
 }
 
 
