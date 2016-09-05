@@ -55,6 +55,9 @@ public partial class Editt : System.Web.UI.Page
         txtName.Text = dt.Rows[0]["Name"].ToString();
         txtDesc.Text = dt.Rows[0]["Description"].ToString();
         txtPrice.Text = dt.Rows[0]["Price"].ToString();
+        txtStock.Text = dt.Rows[0]["Stock"].ToString();
+        txtDiscount.Text = dt.Rows[0]["Discount"].ToString();
+    }
 }
 
 
