@@ -48,7 +48,7 @@ public partial class Editt : System.Web.UI.Page
     private void FillDetails(string ProductID)
     {
         cn.Open();
-        SqlDataAdapter da = new SqlDataAdapter("select * from product where PicID='" + ProductID + "'"
+        SqlDataAdapter da = new SqlDataAdapter("select * from product where PicID='" + ProductID + "'", cn);
         DataTable dt = new DataTable();
         da.Fill(dt);
         txtProductID.Text = dt.Rows[0]["PicID"].ToString();
@@ -60,8 +60,12 @@ public partial class Editt : System.Web.UI.Page
         txtPic.Text = dt.Rows[0]["Pic"].ToString();
         txtBrand.Text = dt.Rows[0]["Brand"].ToString();
 
-        cn.Close();, cn);
+        cn.Close();
     }
+    protected void btnSave_Click(object sender, EventArgs e)
+    {
+        Save(); // to save the updated description into database
+    }        
 }
 
 
