@@ -57,6 +57,10 @@ public partial class Editt : System.Web.UI.Page
         txtPrice.Text = dt.Rows[0]["Price"].ToString();
         txtStock.Text = dt.Rows[0]["Stock"].ToString();
         txtDiscount.Text = dt.Rows[0]["Discount"].ToString();
+        txtPic.Text = dt.Rows[0]["Pic"].ToString();
+        txtBrand.Text = dt.Rows[0]["Brand"].ToString();
+
+        cn.Close();, cn);
     }
 }
 
