@@ -68,7 +68,14 @@ public partial class Editt : System.Web.UI.Page
         FillGrid(); // to see the updated description in the gridview once again load the grid
         btnSubmit.Enabled = false;
         txtProductID.Text = "";
-    }        
+        txtName.Text = "";
+        txtDesc.Text = "";
+        txtPrice.Text = "";
+        txtStock.Text = "";
+        txtDiscount.Text = "";
+        txtBrand.Text = "";
+        lblErrorMessage.Text = "Product updated";
+    }         
 }
 
 
