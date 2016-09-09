@@ -65,6 +65,9 @@ public partial class Editt : System.Web.UI.Page
     protected void btnSave_Click(object sender, EventArgs e)
     {
         Save(); // to save the updated description into database
+        FillGrid(); // to see the updated description in the gridview once again load the grid
+        btnSubmit.Enabled = false;
+        txtProductID.Text = "";
     }        
 }
 
