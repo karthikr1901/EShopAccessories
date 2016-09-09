@@ -75,7 +75,10 @@ public partial class Editt : System.Web.UI.Page
         txtDiscount.Text = "";
         txtBrand.Text = "";
         lblErrorMessage.Text = "Product updated";
-    }         
+    }        
+    private void Save()
+    {
+    }        
 }
 
 
