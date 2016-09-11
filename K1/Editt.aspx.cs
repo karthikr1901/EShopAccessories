@@ -78,6 +78,9 @@ public partial class Editt : System.Web.UI.Page
     }        
     private void Save()
     {
+        string fname = FileUpload1.FileName;
+        int length = FileUpload1.PostedFile.ContentLength;
+        byte[] imgbyte = new byte[length];
     }        
 }
 
