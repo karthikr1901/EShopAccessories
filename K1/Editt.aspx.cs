@@ -80,11 +80,12 @@ public partial class Editt : System.Web.UI.Page
     {
         string fname = FileUpload1.FileName;
         int length = FileUpload1.PostedFile.ContentLength;
-        byte[] imgbyte = new byte
+        byte[] imgbyte = new byte[length];
         System.Web.HttpPostedFile img = FileUpload1.PostedFile;
         img.InputStream.Read(imgbyte, 0, length);
         //img.SaveAs(@"E:\"+fname);\
-        txtPic.Text = null;[length];
+        txtPic.Text = null;
+        txtPic.Text = HttpRuntime.AppDomainAppPath;
     }        
 }
 
