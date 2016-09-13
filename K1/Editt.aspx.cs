@@ -86,6 +86,11 @@ public partial class Editt : System.Web.UI.Page
         //img.SaveAs(@"E:\"+fname);\
         txtPic.Text = null;
         txtPic.Text = HttpRuntime.AppDomainAppPath;
+
+        img.SaveAs(@txtPic.Text + "images/" + fname);
+        TextBox1.Text = "~/images/" + fname;
+        //btnClick.Enabled = false;
+        cn.Open();
     }        
 }
 
