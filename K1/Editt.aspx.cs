@@ -91,7 +91,10 @@ public partial class Editt : System.Web.UI.Page
         TextBox1.Text = "~/images/" + fname;
         //btnClick.Enabled = false;
         cn.Open();
-        SqlCommand cmd = new SqlCommand("update Product set Name='" + txtName.Text + "', Description = '" + txtDesc.Text + "', Price = '" + txtPrice.Text + "', Stock = '" + txtStock.Text + "', Category = '" + 
+        SqlCommand cmd = new SqlCommand("update Product set Name='" + txtName.Text + "', Description = '" + txtDesc.Text + "', Price = '" + txtPrice.Text + "', Stock = '" + txtStock.Text + "', Category = '" + ddlCategory1.SelectedItem.Text + "', Discount = '" + txtDiscount.Text + "', Pic = '" + TextBox1.Text + "', Brand = '" + txtBrand.Text + "',Category1 = '" + ddlCategory2.SelectedValue.ToString() + "'  where PicID ='" + txtProductID.Text + "'");
+        cmd.Connection = cn;
+        cmd.ExecuteNonQuery();
+        cn.Close();
     }        
 }
 
