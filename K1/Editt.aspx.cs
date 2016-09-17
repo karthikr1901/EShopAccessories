@@ -100,7 +100,11 @@ public partial class Editt : System.Web.UI.Page
 
     protected void btnDelete_Click(object sender, EventArgs e)
     {
-        
+        string lll = Convert.ToString(Session["lbl"]);
+        if (lll == null || lll == "")
+        {
+            lblErrorMessage.Text = "Please select an PicID";
+        } 
     }
 }
 
