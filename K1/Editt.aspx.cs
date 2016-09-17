@@ -95,7 +95,13 @@ public partial class Editt : System.Web.UI.Page
         cmd.Connection = cn;
         cmd.ExecuteNonQuery();
         cn.Close();
-    }        
+    } 
+
+
+    protected void btnDelete_Click(object sender, EventArgs e)
+    {
+        
+    }
 }
 
 
