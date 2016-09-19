@@ -112,6 +112,11 @@ public partial class Editt : System.Web.UI.Page
             cmd23.ExecuteNonQuery();
             cn.Close();
         }
+        Session["lbl"] = null;
+        lll = "";
+        FillGrid();
+        TextBox1.Enabled = false;
+        TextBox2.Enabled = false;
     }
 }
 
