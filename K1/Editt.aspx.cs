@@ -104,7 +104,14 @@ public partial class Editt : System.Web.UI.Page
         if (lll == null || lll == "")
         {
             lblErrorMessage.Text = "Please select an PicID";
-        } 
+        }
+        else
+        {
+            cn.Open();
+            cmd23 = new SqlCommand("delete from Details where ID ='" + TextBox1.Text + "'", cn);
+            cmd23.ExecuteNonQuery();
+            cn.Close();
+        }
     }
 }
 
