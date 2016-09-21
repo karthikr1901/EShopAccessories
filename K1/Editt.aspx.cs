@@ -123,6 +123,15 @@ public partial class Editt : System.Web.UI.Page
         TextBox7.Enabled = false;
         TextBox8.Enabled = false;
         TextBox9.Enabled = false;
+        DropDownList2.Enabled = false;
+        CheckBox1.Enabled = false;
+        CheckBox2.Enabled = false;
+        Button3.Visible = false;
+        DropDownList1.Enabled = false;
+        TextBox1.Text = "";
+        TextBox2.Text = "";
+        TextBox3.Text = "";
+        TextBox4.Text = "";   
     }
 }
 
