@@ -117,6 +117,12 @@ public partial class Editt : System.Web.UI.Page
         FillGrid();
         TextBox1.Enabled = false;
         TextBox2.Enabled = false;
+        TextBox3.Enabled = false;
+        TextBox4.Enabled = false;
+        TextBox5.Enabled = false;
+        TextBox7.Enabled = false;
+        TextBox8.Enabled = false;
+        TextBox9.Enabled = false;
     }
 }
 
