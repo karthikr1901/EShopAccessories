@@ -15,6 +15,11 @@ using System.IO;
 
 public partial class Load : System.Web.UI.Page
 {
+    SqlConnection cn = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
+    SqlCommand cmd = new SqlCommand();
+
+    DataRow dr;
+    string code;
     protected void Page_Load(object sender, EventArgs e)
     {
     }
