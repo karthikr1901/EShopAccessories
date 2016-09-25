@@ -20,7 +20,12 @@ public partial class Load : System.Web.UI.Page
 
     DataRow dr;
     string code;
+
     protected void Page_Load(object sender, EventArgs e)
     {
+        TextBox1.Enabled = false;
+        TextBox1.Visible = false;
+        txtUrl.Enabled = false;
+        txtUrl.Visible = false;
     }
 }
