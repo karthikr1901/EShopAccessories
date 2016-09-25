@@ -27,5 +27,12 @@ public partial class Load : System.Web.UI.Page
         TextBox1.Visible = false;
         txtUrl.Enabled = false;
         txtUrl.Visible = false;
+        genpass();
+        TextBox1.Text = HttpRuntime.AppDomainAppPath;
+        TextBox1.Text = TextBox1.Text + "images\\";
+    }
+
+    protected void genpass()
+    {
     }
 }
