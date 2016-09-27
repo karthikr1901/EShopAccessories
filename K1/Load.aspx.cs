@@ -40,5 +40,12 @@ public partial class Load : System.Web.UI.Page
         da.Fill(dt);
 
         int ctr, len;
+        string codeval;
+
+        len = dt.Rows.Count - 1;
+        dr = dt.Rows[len];
+        code = dr["PicID"].ToString();
+        codeval = code.Substring(1, 7);
+        ctr = Convert.ToInt32(codeval);
     }
 }
