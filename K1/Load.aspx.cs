@@ -34,5 +34,11 @@ public partial class Load : System.Web.UI.Page
 
     protected void genpass()
     {
+        cn.Open();
+        SqlDataAdapter da = new SqlDataAdapter("select * from  Product ", cn);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+
+        int ctr, len;
     }
 }
