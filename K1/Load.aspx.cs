@@ -47,5 +47,14 @@ public partial class Load : System.Web.UI.Page
         code = dr["PicID"].ToString();
         codeval = code.Substring(1, 7);
         ctr = Convert.ToInt32(codeval);
+        if ((ctr >= 1) && (ctr < 9))
+        {
+            ctr = ctr + 1;
+            txtPicID.Text = "A000000" + ctr;
+        }
+        else if ((ctr >= 9) && (ctr < 99))
+        {
+            ctr = ctr + 1;
+            txtPicID.Text = "A00000" + ctr;
     }
 }
