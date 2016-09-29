@@ -56,5 +56,11 @@ public partial class Load : System.Web.UI.Page
         {
             ctr = ctr + 1;
             txtPicID.Text = "A00000" + ctr;
+        }
+        else if ((ctr >= 99) && (ctr < 999))
+        {
+            ctr = ctr + 1;
+            txtPicID.Text = "A0000" + ctr;
+        }
     }
 }
