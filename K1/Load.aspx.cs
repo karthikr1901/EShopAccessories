@@ -67,5 +67,10 @@ public partial class Load : System.Web.UI.Page
             ctr = ctr + 1;
             txtPicID.Text = "A000" + ctr;
         }
+        else if ((ctr >= 9999) && (ctr < 99999))
+        {
+            ctr = ctr + 1;
+            txtPicID.Text = "A00" + ctr;
+        }
     }
 }
