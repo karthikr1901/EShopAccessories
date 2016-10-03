@@ -77,4 +77,15 @@ public partial class Load : System.Web.UI.Page
             ctr = ctr + 1;
             txtPicID.Text = "A0" + ctr;
         }
+        else if (ctr >= 999999)
+        {
+            ctr = ctr + 1;
+            txtPicID.Text = "A" + ctr;
+        }
+    }
+
+
+    protected void Button1_Click(object sender, EventArgs e)
+    {
+    }
 }
