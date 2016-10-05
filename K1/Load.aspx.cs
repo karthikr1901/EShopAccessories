@@ -87,5 +87,13 @@ public partial class Load : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
+        //if (isValidSubmit())
+        //{
+
+        //if (FileUpload1.HasFile)
+        //{
+            string fname = FileUpload1.FileName;
+            int length = FileUpload1.PostedFile.ContentLength;
+            byte[] imgbyte = new byte[length];
     }
 }
