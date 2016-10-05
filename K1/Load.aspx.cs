@@ -95,5 +95,12 @@ public partial class Load : System.Web.UI.Page
             string fname = FileUpload1.FileName;
             int length = FileUpload1.PostedFile.ContentLength;
             byte[] imgbyte = new byte[length];
+            System.Web.HttpPostedFile img = FileUpload1.PostedFile;
+            img.InputStream.Read(imgbyte, 0, length);
+            //img.SaveAs(@"E:\"+fname);\
+            img.SaveAs(@TextBox1.Text + fname);
+            txtUrl.Text = "~/images/" + fname;
+            //btnClick.Enabled = false;
+        //}
     }
 }
