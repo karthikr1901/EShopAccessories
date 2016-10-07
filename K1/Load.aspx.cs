@@ -103,6 +103,6 @@ public partial class Load : System.Web.UI.Page
             //btnClick.Enabled = false;
         //}
 
-        cmd.CommandText = "Insert into Product values ('" + txtPicID.Text + "','" + txtName.Text + "','" + txtDesc.Text + "', '" + txtPrice.Text + "','" + 
+        cmd.CommandText = "Insert into Product values ('" + txtPicID.Text + "','" + txtName.Text + "','" + txtDesc.Text + "', '" + txtPrice.Text + "','" + txtStock.Text + "' , '" + ddlCategory1.SelectedItem.Text + "' , '" + txtDiscount.Text + "' , '" + txtUrl.Text + "' , '" + txtBrand.Text + "','" + ddlCategory2.SelectedValue.ToString() + "')";
     }
 }
