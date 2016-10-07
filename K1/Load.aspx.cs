@@ -102,5 +102,7 @@ public partial class Load : System.Web.UI.Page
             txtUrl.Text = "~/images/" + fname;
             //btnClick.Enabled = false;
         //}
+
+        cmd.CommandText = "Insert into Product values ('" + txtPicID.Text + "','" + txtName.Text + "','" + txtDesc.Text + "', '" + txtPrice.Text + "','" + 
     }
 }
