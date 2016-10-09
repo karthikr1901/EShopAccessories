@@ -113,5 +113,13 @@ public partial class Load : System.Web.UI.Page
 
         txtName.Text = "";
         txtDesc.Text = "";
+        txtPrice.Text = "";
+        txtStock.Text = "";
+        txtDiscount.Text = "";
+        txtBrand.Text = "";
+        lblErrorMessage.Text = "Product updated";
+        //Button2.Visible = true;
+
+        // }
     }
 }
