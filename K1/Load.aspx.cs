@@ -122,4 +122,13 @@ public partial class Load : System.Web.UI.Page
 
         // }
     }
+
+    private bool isValidSubmit()
+    {
+        if (txtName.Text.Trim() == "")
+        {
+            lblErrorMessage.Text = "Please Enter Values in Textbox3";
+            return false;
+        }
+    }
 }
