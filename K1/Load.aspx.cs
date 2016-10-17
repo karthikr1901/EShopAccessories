@@ -123,45 +123,49 @@ public partial class Load : System.Web.UI.Page
         // }
     }
 
-    private bool isValidSubmit()
-    {
-        if (txtName.Text.Trim() == "")
-        {
-            lblErrorMessage.Text = "Please Enter Values in Textbox3";
-            return false;
-        }
-        else if (txtDesc.Text.Trim() == "")
-        {
-            lblErrorMessage.Text = "Please Enter Values in Textbox4";
-            return false;
-        }
-        else if (txtPrice.Text.Trim() == "")
-        {
-            lblErrorMessage.Text = "Please Enter Values in Textbox5";
-            return false;
-        }
-        else if (txtStock.Text.Trim() == "")
-        {
-            lblErrorMessage.Text = "Please Enter Values in Textbox6";
-            return false;
-        }
+    //private bool isValidSubmit()
+    //{
+    //    if (txtName.Text.Trim() == "")
+    //    {
+    //        lblErrorMessage.Text = "Please Enter Values in Textbox3";
+    //        return false;
+    //    }
+    //    else if (txtDesc.Text.Trim() == "")
+    //    {
+    //        lblErrorMessage.Text = "Please Enter Values in Textbox4";
+    //        return false;
+    //    }
+    //    else if (txtPrice.Text.Trim() == "")
+    //    {
+    //        lblErrorMessage.Text = "Please Enter Values in Textbox5";
+    //        return false;
+    //    }
+    //    else if (txtStock.Text.Trim() == "")
+    //    {
+    //        lblErrorMessage.Text = "Please Enter Values in Textbox6";
+    //        return false;
+    //    }
 
-        else if (txtDiscount.Text.Trim() == "")
-        {
-            lblErrorMessage.Text = "Please Enter Values in Textbox8";
-            return false;
-        }
-        else if (txtBrand.Text.Trim() == "")
-        {
-            lblErrorMessage.Text = "Please Enter Values in Textbox9";
-            return false;
-        }
-        else if (txtUrl.Text.Trim() == "")
-        {
-            lblErrorMessage.Text = "Please Enter Values in Textbox10";
-            return false;
-        }
-        lblErrorMessage.Text = "";
-        return true;
+    //    else if (txtDiscount.Text.Trim() == "")
+    //    {
+    //        lblErrorMessage.Text = "Please Enter Values in Textbox8";
+    //        return false;
+    //    }
+    //    else if (txtBrand.Text.Trim() == "")
+    //    {
+    //        lblErrorMessage.Text = "Please Enter Values in Textbox9";
+    //        return false;
+    //    }
+    //    else if (txtUrl.Text.Trim() == "")
+    //    {
+    //        lblErrorMessage.Text = "Please Enter Values in Textbox10";
+    //        return false;
+    //    }
+    //    lblErrorMessage.Text = "";
+    //    return true;
+    //}
+    protected void Button2_Click(object sender, EventArgs e)
+    {
+        Response.Redirect("Editt.aspx");
     }
 }
