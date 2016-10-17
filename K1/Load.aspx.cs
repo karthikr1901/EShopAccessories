@@ -156,5 +156,12 @@ public partial class Load : System.Web.UI.Page
             lblErrorMessage.Text = "Please Enter Values in Textbox9";
             return false;
         }
+        else if (txtUrl.Text.Trim() == "")
+        {
+            lblErrorMessage.Text = "Please Enter Values in Textbox10";
+            return false;
+        }
+        lblErrorMessage.Text = "";
+        return true;
     }
 }
