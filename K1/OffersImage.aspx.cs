@@ -10,4 +10,10 @@ using System.Web.Configuration;
 
 public partial class OffersImage : System.Web.UI.Page
 {
+    SqlConnection cn = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
+
+    protected void Page_Load(object sender, EventArgs e)
+    {
+
+    }
 }
