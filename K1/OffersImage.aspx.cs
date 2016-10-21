@@ -16,4 +16,11 @@ public partial class OffersImage : System.Web.UI.Page
     {
 
     }
+    protected void btnUpload_Click(object sender, EventArgs e)
+    {
+        string fname = FileUpload1.FileName;
+        int length = FileUpload1.PostedFile.ContentLength;
+        byte[] imgbyte = new byte[length];
+        System.Web.HttpPostedFile img = FileUpload1.PostedFile;
+    }
 }
