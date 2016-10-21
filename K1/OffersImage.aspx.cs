@@ -22,5 +22,8 @@ public partial class OffersImage : System.Web.UI.Page
         int length = FileUpload1.PostedFile.ContentLength;
         byte[] imgbyte = new byte[length];
         System.Web.HttpPostedFile img = FileUpload1.PostedFile;
+        img.InputStream.Read(imgbyte, 0, length);
+        //img.SaveAs(@"E:\"+fname);\
+        txtPic.Text = null;
     }
 }
