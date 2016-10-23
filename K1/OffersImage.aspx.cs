@@ -30,5 +30,9 @@ public partial class OffersImage : System.Web.UI.Page
         TextBox1.Text = "~/images/" + fname;
         btnUpload.Enabled = false;
         cn.Open();
+        SqlCommand cmd = new SqlCommand("update Master set Pic ='" + TextBox1.Text + "'  where position ='" + ddlImage.SelectedItem.Text + "'"); ;
+        cmd.Connection = cn;
+        cmd.ExecuteNonQuery();
+        cn.Close();
     }
 }
