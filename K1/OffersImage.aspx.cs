@@ -25,5 +25,10 @@ public partial class OffersImage : System.Web.UI.Page
         img.InputStream.Read(imgbyte, 0, length);
         //img.SaveAs(@"E:\"+fname);\
         txtPic.Text = null;
+        txtPic.Text = HttpRuntime.AppDomainAppPath;
+        img.SaveAs(@txtPic.Text + "images/" + fname);
+        TextBox1.Text = "~/images/" + fname;
+        btnUpload.Enabled = false;
+        cn.Open();
     }
 }
