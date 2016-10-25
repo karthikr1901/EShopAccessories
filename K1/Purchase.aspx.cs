@@ -10,6 +10,7 @@ using System.Data;
 
 public partial class Purchase : System.Web.UI.Page
 {
+    SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
     protected void Page_Load(object sender, EventArgs e)
     {
     }
