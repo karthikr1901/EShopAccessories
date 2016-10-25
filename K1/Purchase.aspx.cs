@@ -13,5 +13,13 @@ public partial class Purchase : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+        {
+            ViewState["ID"] = Request.QueryString["ID"];
+            if (ViewState["ID"] != null && ViewState["ID"].ToString() != "")
+            {
+                lblHead.Text = "Purchase History for " + GetName();
+            }
+        }
     }
 }
