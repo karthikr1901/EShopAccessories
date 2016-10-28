@@ -20,6 +20,11 @@ public partial class Purchase : System.Web.UI.Page
             {
                 lblHead.Text = "Purchase History for " + GetName();
             }
+            else
+            {
+                lblHead.Text = "Purchase History";
+            }
+            LoadPurchase();
         }
     }
 }
