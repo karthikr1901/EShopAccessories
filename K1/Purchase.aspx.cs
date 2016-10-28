@@ -27,4 +27,9 @@ public partial class Purchase : System.Web.UI.Page
             LoadPurchase();
         }
     }
+    private string GetName()
+    {
+        conn.Open();
+        SqlCommand cmd = new SqlCommand("select Name from Customer where CustomerID='" + ViewState["ID"].ToString() + "'", conn);
+    }
 }
