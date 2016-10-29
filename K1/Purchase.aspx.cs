@@ -35,4 +35,9 @@ public partial class Purchase : System.Web.UI.Page
         conn.Close();
         return strName;
     }
+    private void LoadPurchase()
+    {
+        SqlDataAdapter da;
+        conn.Open();
+    }
 }
