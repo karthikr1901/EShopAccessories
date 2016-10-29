@@ -31,5 +31,8 @@ public partial class Purchase : System.Web.UI.Page
     {
         conn.Open();
         SqlCommand cmd = new SqlCommand("select Name from Customer where CustomerID='" + ViewState["ID"].ToString() + "'", conn);
+        string strName = cmd.ExecuteScalar().ToString();
+        conn.Close();
+        return strName;
     }
 }
