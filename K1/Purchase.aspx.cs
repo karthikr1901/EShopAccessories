@@ -43,5 +43,9 @@ public partial class Purchase : System.Web.UI.Page
         {
             da = new SqlDataAdapter("select * from Purchase where CustomerID='" + ViewState["ID"].ToString() + "'", conn);
         }
+        else
+        {
+            da = new SqlDataAdapter("select * from Purchase", conn);
+        }
     }
 }
