@@ -47,5 +47,12 @@ public partial class Purchase : System.Web.UI.Page
         {
             da = new SqlDataAdapter("select * from Purchase", conn);
         }
+        DataTable dt = new DataTable();
+        da.Fill(dt);
+        gvPurchase.DataSource = dt;
+        gvPurchase.DataBind();
+
+        double p = 0;
+
     }
 }
