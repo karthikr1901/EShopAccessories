@@ -54,5 +54,11 @@ public partial class Purchase : System.Web.UI.Page
 
         double p = 0;
 
+        foreach (DataRow row in dt.Rows)
+        {
+            p += double.Parse(row["Price"].ToString());
+        }
+        lblTotalPrice.Text = "Total Price "+p.ToString();
+        lblTotalItems.Text = "Total Items " + dt.Rows.Count.ToString();
     }
 }
