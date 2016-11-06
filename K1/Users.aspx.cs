@@ -13,5 +13,13 @@ public partial class Users : System.Web.UI.Page
     SqlConnection conn = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!IsPostBack)
+        {
+
+            LoadUsers();
+        }
+    }
+    private void LoadUsers()
+    {
     }
 }
