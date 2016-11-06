@@ -21,5 +21,9 @@ public partial class Users : System.Web.UI.Page
     }
     private void LoadUsers()
     {
+        conn.Open();
+        SqlDataAdapter da = new SqlDataAdapter("select * from Customer", conn);
+        DataTable dt = new DataTable();
+        da.Fill(dt);
     }
 }
