@@ -29,4 +29,11 @@ public partial class Users : System.Web.UI.Page
         gvUsers.DataBind();
         conn.Close();
     }
+    protected void lbID_Click(object sender, EventArgs e)
+    {
+        LinkButton lb = (LinkButton)sender;
+        Response.Redirect("Purchase.aspx?ID=" + lb.Text);
+
+
+    }
 }
