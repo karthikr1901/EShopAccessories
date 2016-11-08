@@ -25,5 +25,8 @@ public partial class Users : System.Web.UI.Page
         SqlDataAdapter da = new SqlDataAdapter("select * from Customer", conn);
         DataTable dt = new DataTable();
         da.Fill(dt);
+        gvUsers.DataSource = dt;
+        gvUsers.DataBind();
+        conn.Close();
     }
 }
