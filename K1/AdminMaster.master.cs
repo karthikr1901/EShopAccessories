@@ -10,6 +10,7 @@ using System.Data;
 using System.Web.Configuration;
 public partial class AdminMaster : System.Web.UI.MasterPage
 {
+    SqlConnection cn = new SqlConnection(WebConfigurationManager.ConnectionStrings["myConnectionString"].ToString());
     protected void Page_Load(object sender, EventArgs e)
     {
         cn.Open();
@@ -79,7 +80,8 @@ public partial class AdminMaster : System.Web.UI.MasterPage
     protected void LinkButton6_Click(object sender, EventArgs e)
     {
         Response.Redirect("OffersImage.aspx");
-    }protected void LinkButton9_Click(object sender, EventArgs e)
+    }
+    protected void LinkButton9_Click(object sender, EventArgs e)
     {
         Response.Redirect("Change.aspx");
     }

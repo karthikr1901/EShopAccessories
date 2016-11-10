@@ -39,6 +39,7 @@ public partial class feedback : System.Web.UI.Page
             gvUsers.Visible = false;
         }
     }
+
     protected void fillgrid()
     {
         cn.Open();
@@ -95,5 +96,4 @@ public partial class feedback : System.Web.UI.Page
             
         }
     }
-    
 }

@@ -75,7 +75,7 @@ public partial class Editt : System.Web.UI.Page
         txtDiscount.Text = "";
         txtBrand.Text = "";
         lblErrorMessage.Text = "Product updated";
-    }        
+    }
     private void Save()
     {
         string fname = FileUpload1.FileName;
@@ -95,7 +95,7 @@ public partial class Editt : System.Web.UI.Page
         cmd.Connection = cn;
         cmd.ExecuteNonQuery();
         cn.Close();
-    } 
+    }
 
 
     protected void btnDelete_Click(object sender, EventArgs e)
@@ -131,7 +131,7 @@ public partial class Editt : System.Web.UI.Page
         TextBox1.Text = "";
         TextBox2.Text = "";
         TextBox3.Text = "";
-        TextBox4.Text = "";   
+        TextBox4.Text = "";
     }
 }
 

@@ -16,9 +16,9 @@ public partial class Cart : System.Web.UI.Page
     SqlDataAdapter da;
     DataTable dt;
     SqlCommand cm = new SqlCommand();
-    string productid = "", userid = "";"";
+    string productid = "", userid = "";
     protected void Page_Load(object sender, EventArgs e)
-    {        
+    {
         TextBox9.Visible = false;
         TextBox1.Visible = false;  
         TextBox1.Text = Convert.ToString(Session["prodid"]);
@@ -85,7 +85,7 @@ public partial class Cart : System.Web.UI.Page
         {
             lblErrorMessage.Text = "Please Select Mode of Payment";
             return false;
-        }       
+        }
         
         if(RadioButtonList1.SelectedItem.Text == "Net Banking")
         {
@@ -124,7 +124,7 @@ public partial class Cart : System.Web.UI.Page
                 {
                     lblErrorMessage.Text = "Please Enter Card Number";
                     return false;
-                } 
+                }
             }
             if (RadioButtonList2.SelectedItem.Text != "Maestro")
             {

@@ -30,7 +30,7 @@ public partial class Login : System.Web.UI.Page
     //    }
     //}
 
-private void check()
+    private void check()
     {
         //TextBox10.Text = TextBox1.Text + Label9.Text + DropDownList1.SelectedItem.Text;
         //cn.ConnectionString = "Data Source = 172.23.197.6\\sql2008; Initial Catalog = Smart Accessories Inc.; User ID = sa; Password = PASSWORD@123";
@@ -64,7 +64,6 @@ private void check()
             lbl.Text = "Invalid Username or Password!";
         }
     }
-
     protected void Page_Load(object sender, EventArgs e)
     {
 

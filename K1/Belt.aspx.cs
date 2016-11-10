@@ -27,7 +27,7 @@ public partial class Belt : System.Web.UI.Page
             check();
             Disp();
         //}
-    } 
+    }
     protected void check()
     {
         if (Session["click"].ToString() == "Belts")

@@ -42,7 +42,7 @@ public partial class MasterPage : System.Web.UI.MasterPage
             LinkButton1.Text = "Login";
             Response.Redirect("Default2.aspx");
         }
-    }    
+    }
     protected void LinkButton2_Click(object sender, EventArgs e)
     {
         Response.Redirect("Cart.aspx");
